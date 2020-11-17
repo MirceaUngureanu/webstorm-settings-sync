@@ -1,0 +1,14 @@
+<templateSet group="React">
+  <template name="rfct" value="import React from 'react';&#10;&#10;interface $TM_FILENAME_BASE$Props = {&#10;    &#10;};&#10;&#10;export const $TM_FILENAME_BASE$: React.FC&lt;$TM_FILENAME_BASE$Props&gt; = ({}) =&gt; {&#10;    return (&#10;        $END$&#10;    )&#10;}" description="React Function Component with Typescript" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_FILENAME_BASE" expression="capitalize(camelCase(fileNameWithoutExtension()))" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ut" value="export const $TM_FILENAME_BASE$ = () =&gt; {&#10;    $END$&#10;}" description="Utility function export" toReformat="false" toShortenFQNames="true">
+    <variable name="TM_FILENAME_BASE" expression="fileNameWithoutExtension()" defaultValue="&quot;&quot;" alwaysStopAt="false" />
+    <context>
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>
